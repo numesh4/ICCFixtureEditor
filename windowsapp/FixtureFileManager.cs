@@ -81,8 +81,15 @@ namespace Fixtures
                 SetMatchForHeaderAndRefs(header, match);
                 matches.Add(match);
             }
+            //_firstMatch = matches[0];
+            // Debug.Assert(_firstMatch = matches[0]);
 
-            _firstMatch = matches[0];
+            if (matches.Count() > 0)
+            {
+
+                _firstMatch = matches[0];
+            }
+            //_firstMatch = matches[0]
             return matches;
         }
 

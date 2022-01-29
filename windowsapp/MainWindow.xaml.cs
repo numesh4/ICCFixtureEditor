@@ -23,8 +23,8 @@ namespace Fixtures
     public partial class MainWindow : Window
     {
         public static ObservableCollection<Match> gMatches;
-        private const int BASE_YEAR = 2012;
-        private const int DEFAULT_VERSION = 2016;
+        private const int BASE_YEAR = 2000;
+        private const int DEFAULT_VERSION = 2021;
         private FixtureFileManager _fixtureFileMgr;
 
         public MainWindow()
@@ -66,7 +66,7 @@ namespace Fixtures
         private void PopulateMatches()
         {
             Matches matches = (Matches)Resources["matches"];
-            matches.Clear();
+            //matches.Clear();
             var matchesList = _fixtureFileMgr.CreateMatchesFromFile().ToList();
             matchesList.ForEach(m => matches.Add(m));
         }
